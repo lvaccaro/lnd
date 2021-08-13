@@ -6,7 +6,7 @@ REPOPATH=$PWD
 # download lightning
 git clone https://github.com/ElementsProject/lightning.git lightning
 cd lightning
-git checkout v0.10.0
+git checkout v0.10.1
 
 # set virtualenv for lightning
 python3 -m virtualenv venv
