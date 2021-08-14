@@ -38,7 +38,7 @@ git clone https://github.com/clightning4j/esplora_clnd_plugin.git
 cd esplora_clnd_plugin && git checkout master && cd ..
 cp esplora_clnd_plugin/esplora.c plugins/
 # sed -i 's/LDLIBS = /LDLIBS = -lcurl -lssl -lcrypto /g' Makefile
-sed -i -e '/LDLIBS =/s/$/ -lcurl -lssl -lcrypto/' Makefile
+sed -i -e '/LDLIBS =/s/$/ -L${BUILDROOT}\/lib\/ -lcurl -lssl -lcrypto/' Makefile
 patch -p1 < esplora_clnd_plugin/Makefile.patch
 
 # build external libraries and source
